@@ -1,0 +1,141 @@
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+isolation: isolate;
+}
+
+:root{
+    --clr-primary-blue-300: hsl(185, 75%, 39%);
+    --clr-primary-blue-800: hsl(229, 23%, 23%);
+    --clr-primary-blue-600: hsl(227, 10%, 46%);
+    --clr-neutral-gray-100: hsl(0, 0%, 59%);
+
+    --ff-normal: "Kumbh Sans", sans-serif;
+    
+    --fw-normal:400;
+    --fw-bold:700;
+
+    --sm:375px;
+    --lg:1440px;
+
+}
+
+/* flex-group */
+.flex-group{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.wide-gap{
+    gap: 3.25rem;
+}
+
+
+body{
+    min-height: 100vh;
+    font-weight: var(--fw-normal);
+    background-color: var(--clr-primary-blue-300);
+    font-family: var(--ff-normal);
+    color: var(--clr-primary-blue-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 40vh right 48vw, top 44vh left 45vw;
+}
+
+.card{
+    background-color: white;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: .75rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card .content{
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+    padding-inline: 1.5rem;
+    padding-block-end: 1.5rem;
+}
+.card .content img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-inline: auto;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: 5px solid white;
+}
+.card-name{
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-blue-800);
+}
+
+address{
+    font-style: normal;
+}
+.separator{
+    background-color: hsl(0deg 0% 83.2%);
+    display: block;
+    width: calc(100% + 4rem);
+    justify-self: center;
+    height: 1px;
+}
+.stat__number{
+    color: var(--clr-primary-blue-800);
+    font-weight: var(--fw-bold);
+}
+.stat__lable{
+    font-size: 14px;
+}
+
+
+
